@@ -4,10 +4,10 @@
 
 // setTimeout(imprimirString, 2000, 'Hola');
 
-function mostrarLetras (palabra, termine) {
+function mostrarLetras(palabra, termine) {
     let i = 0;
     const interval = setInterval(() => {
-        if (i < palabra.length) {
+        if (i < 4) {
             console.log(palabra[i]);
             i++;
         } else {

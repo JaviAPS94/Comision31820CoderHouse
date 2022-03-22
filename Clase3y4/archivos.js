@@ -136,6 +136,7 @@ async function ejercicio() {
 
         info.contenidoObj.author = 'Alex';
 
+        console.log("alex")
         console.log(info);
 
         await fs.promises.writeFile('./package.json.coder', JSON.stringify(info, null, 2));
