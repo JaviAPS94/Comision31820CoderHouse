@@ -1,0 +1,10 @@
+extends layout 
+
+block medidor
+    // El guión permite definir variables
+    - const estilo = "width:25%;height:20px;"
+    // el simbolo != permite insertar html parseado
+    h1(style="color:blue;")!=titulo
+    span=min+" "
+    meter(value=nivel min=min max=max style=estilo)
+    span=" "+max
