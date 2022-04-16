@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.dividir = exports.multiplicar = exports.restar = exports.sumar = void 0;
+const sumar = (number1, number2) => number1 + number2;
+exports.sumar = sumar;
+const restar = (number1, number2) => number1 - number2;
+exports.restar = restar;
+const multiplicar = (number1, number2) => number1 * number2;
+exports.multiplicar = multiplicar;
+const dividir = (number1, number2) => number1 / number2;
+exports.dividir = dividir;
