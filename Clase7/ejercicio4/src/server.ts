@@ -7,6 +7,22 @@ const app = express();
 const superficie: Superficie = new Superficie();
 const perimetro: Perimetro = new Perimetro();
 
+function calcularSuperficePorParametro(figura: string, param1: number, param2: number) {
+    const calculos = {
+        cuadrado: (param1: number): number => {
+            return superficie.cuadrado(param1);
+        },
+        rectangulo: (param1: number, param2: number): number => {
+            return superficie.rectangulo(param1, param2);
+        },
+        default: (): number => {
+            return 0;
+        },
+    };
+
+    return (calculos[figura] || calculos['default'])(param1, param2);
+}
+
 app.get('/superficie/:figura/:param1/:param2?', (req, res) => {
     let { figura, param1, param2 } = req.params;
 

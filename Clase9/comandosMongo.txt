@@ -1,0 +1,7 @@
+show dbs
+db
+use mibase
+show collections
+db
+db.usuarios.insert({nombre: 'Juan', edad: 32})
+db.usuarios.find()
