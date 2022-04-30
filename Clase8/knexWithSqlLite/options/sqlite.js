@@ -6,6 +6,4 @@ const options = {
     useNullAsDefault: true
 }
 
-module.exports = {
-    options
-}
+module.exports = options

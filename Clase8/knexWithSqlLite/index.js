@@ -1,5 +1,5 @@
 const ClienteSql = require("./sql");
-const options = require("./options/mysqlDB");
+const options = require("./options/sqlite");
 
 const sql = new ClienteSql(options);
 
