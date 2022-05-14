@@ -9,7 +9,9 @@ export default {
         
     },
     sqlite3: {
-       
+       connection: {
+           filename: './'
+       }
     },
     mariaDb: {
         
