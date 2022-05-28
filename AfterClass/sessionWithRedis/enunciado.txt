@@ -1,0 +1,14 @@
+1. El usuario inicia sesión en la aplicación ingresando el nombre de usuario y la contraseña.
+
+2. Después de enviar, el servidor genera un número aleatorio único, conocido como ID de sesión, 
+que también se almacena en la tienda de Redis.
+
+3. El ID de sesión se devuelve al usuario en el encabezado de la cookie de los datos de respuesta. 
+Para Node.js, este encabezado de cookie se denomina connect.sid.
+
+4. La próxima vez que el usuario acceda a la aplicación, 
+la cookie se devolverá al servidor en el encabezado con la identificación de la sesión. 
+Luego, el servidor verifica la identificación de la sesión en particular en la tienda Redis. 
+Si la sesión existe en la tienda, el usuario será redirigido a la página de inicio sin ir a la página de inicio de sesión.
+
+5. El usuario puede permanecer en la página hasta que expire la sesión.
