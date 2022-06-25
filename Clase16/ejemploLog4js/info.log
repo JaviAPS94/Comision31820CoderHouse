@@ -1,0 +1,3 @@
+[2022-06-25T10:45:47.194] [WARN] archivo - Text warn
+[2022-06-25T10:45:47.199] [ERROR] archivo - Text error
+[2022-06-25T10:45:47.199] [FATAL] archivo - Text fatal

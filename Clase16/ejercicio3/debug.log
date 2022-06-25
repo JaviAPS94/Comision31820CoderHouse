@@ -1,0 +1,4 @@
+{"level":"info","message":"Server running"}
+{"level":"warn","message":"Ruta no implementada"}
+{"level":"error","message":"Parámetros incorrectos para la suma"}
+{"level":"info","message":"Parámetros 2 y 3 correctos para la suma"}

@@ -1,0 +1,4 @@
+[2022-06-25T11:14:55.996] [INFO] prod - Server running
+[2022-06-25T11:15:26.216] [WARN] prod - Ruta no implementada
+[2022-06-25T11:15:47.304] [ERROR] prod - Parámetros incorrectos para la suma
+[2022-06-25T11:16:50.756] [INFO] prod - Parámetros 2 y 3 correctos para la suma
