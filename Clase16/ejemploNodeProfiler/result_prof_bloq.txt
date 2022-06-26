@@ -1,0 +1,107 @@
+Statistical profiling result from bloq-v8.log, (28930 ticks, 4 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     46    0.2%          /usr/lib/system/libsystem_pthread.dylib
+     17    0.1%          /usr/lib/system/libsystem_platform.dylib
+     17    0.1%          /usr/lib/system/libsystem_c.dylib
+     14    0.0%          /usr/lib/libc++.1.dylib
+     13    0.0%          /usr/lib/system/libsystem_malloc.dylib
+      8    0.0%          /usr/lib/system/libsystem_kernel.dylib
+      3    0.0%          /usr/lib/system/libdyld.dylib
+      1    0.0%          /usr/lib/system/libsystem_notify.dylib
+      1    0.0%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      6    0.0%    0.0%  LazyCompile: *normalizeString node:path:66:25
+      1    0.0%    0.0%  RegExp: ;\s*charset\s*=
+      1    0.0%    0.0%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    0.0%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      1    0.0%    0.0%  LazyCompile: *fastparse /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/parseurl/index.js:95:20
+      1    0.0%    0.0%  Function: ^validateString node:internal/validators:117:24
+      1    0.0%    0.0%  Function: ^process_params /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/index.js:338:47
+      1    0.0%    0.0%  Function: ^matchKnownFields node:_http_incoming:231:26
+      1    0.0%    0.0%  Function: ^insert node:internal/timers:350:16
+      1    0.0%    0.0%  Function: ^hasObserver node:internal/perf/observe:474:21
+      1    0.0%    0.0%  Function: ^format /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/content-type/index.js:65:17
+      1    0.0%    0.0%  Function: ^dispatch /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/route.js:98:45
+      1    0.0%    0.0%  Function: ^allocate node:buffer:397:18
+      1    0.0%    0.0%  Function: ^_write node:internal/streams/writable:283:16
+      1    0.0%    0.0%  Function: ^_finish node:_http_outgoing:908:53
+      1    0.0%    0.0%  Function: ^Socket._writeGeneric node:net:769:42
+      1    0.0%    0.0%  Function: ^Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+
+ [C++]:
+   ticks  total  nonlib   name
+  28474   98.4%   98.8%  t auto node::options_parser::OptionsParser<node::PerIsolateOptions>::Convert<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField, node::EnvironmentOptions>(std::__1::shared_ptr<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField>, node::EnvironmentOptions* (node::PerIsolateOptions::*)())::AdaptedField::LookupImpl(node::PerIsolateOptions*) const
+     94    0.3%    0.3%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     51    0.2%    0.2%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     35    0.1%    0.1%  T _host_get_special_port
+     29    0.1%    0.1%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+     29    0.1%    0.1%  T _host_request_notification
+     20    0.1%    0.1%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     14    0.0%    0.0%  T __kernelrpc_mach_port_get_context
+      4    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      4    0.0%    0.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      3    0.0%    0.0%  T _mach_msg_destroy
+      2    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  T _mig_strncpy_zerofill
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t unsigned long std::__1::__hash_table<node::CleanupHookCallback, node::CleanupHookCallback::Hash, node::CleanupHookCallback::Equal, std::__1::allocator<node::CleanupHookCallback> >::__erase_unique<node::CleanupHookCallback>(node::CleanupHookCallback const&)
+      1    0.0%    0.0%  t std::__1::__shared_ptr_pointer<char*, std::__1::default_delete<char []>, std::__1::allocator<char> >::__on_zero_shared_weak()
+      1    0.0%    0.0%  t std::__1::__shared_ptr_emplace<node::inspector::NodeInspectorClient, std::__1::allocator<node::inspector::NodeInspectorClient> >::__on_zero_shared()
+      1    0.0%    0.0%  t std::__1::__hash_iterator<std::__1::__hash_node<node::CleanupHookCallback, void*>*> std::__1::__hash_table<node::CleanupHookCallback, node::CleanupHookCallback::Hash, node::CleanupHookCallback::Equal, std::__1::allocator<node::CleanupHookCallback> >::find<node::CleanupHookCallback>(node::CleanupHookCallback const&)
+      1    0.0%    0.0%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::NonOwningExternalTwoByteResource::data() const
+      1    0.0%    0.0%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::(anonymous namespace)::Parser::Proxy<int (node::(anonymous namespace)::Parser::*)(char const*, unsigned long), &(node::(anonymous namespace)::Parser::on_header_value(char const*, unsigned long))>::Raw(llhttp__internal_s*, char const*, unsigned long)
+      1    0.0%    0.0%  T node::options_parser::GetOptions(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::fs::NewFSReqCallback(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::fs::FSReqCallback::Reject(v8::Local<v8::Value>)
+      1    0.0%    0.0%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::InternalMakeCallback(node::Environment*, v8::Local<v8::Object>, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*, node::async_context)
+      1    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventBefore()
+      1    0.0%    0.0%  T _pthread_workqueue_setup
+      1    0.0%    0.0%  T _mach_get_times
+      1    0.0%    0.0%  T __kernelrpc_vm_remap
+
+ [Summary]:
+   ticks  total  nonlib   name
+     22    0.1%    0.1%  JavaScript
+  28784   99.5%   99.9%  C++
+     60    0.2%    0.2%  GC
+    120    0.4%          Shared libraries
+      4    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+  28757  100.0%   99.4%  t auto node::options_parser::OptionsParser<node::PerIsolateOptions>::Convert<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField, node::EnvironmentOptions>(std::__1::shared_ptr<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField>, node::EnvironmentOptions* (node::PerIsolateOptions::*)())::AdaptedField::LookupImpl(node::PerIsolateOptions*) const
+      1    0.0%    0.0%  T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  28474   98.4%  t auto node::options_parser::OptionsParser<node::PerIsolateOptions>::Convert<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField, node::EnvironmentOptions>(std::__1::shared_ptr<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField>, node::EnvironmentOptions* (node::PerIsolateOptions::*)())::AdaptedField::LookupImpl(node::PerIsolateOptions*) const
+  28254   99.2%    t auto node::options_parser::OptionsParser<node::PerIsolateOptions>::Convert<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField, node::EnvironmentOptions>(std::__1::shared_ptr<node::options_parser::OptionsParser<node::EnvironmentOptions>::BaseOptionField>, node::EnvironmentOptions* (node::PerIsolateOptions::*)())::AdaptedField::LookupImpl(node::PerIsolateOptions*) const
+  27573   97.6%      Function: ^pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+  27458   99.6%        Function: ^<anonymous> /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/server.js:32:23
+  27458  100.0%          Function: ^handle /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/layer.js:86:49
+  27175   99.0%            Function: ^next /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/route.js:116:16
+    283    1.0%            LazyCompile: ~next /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/route.js:116:16
+    503    1.8%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+    450   89.5%        LazyCompile: ~<anonymous> /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/server.js:32:23
+    335   74.4%          Function: ^handle /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/layer.js:86:49
+    335  100.0%            LazyCompile: ~next /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/route.js:116:16
+    115   25.6%          LazyCompile: ~handle /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/layer.js:86:49
+    115  100.0%            LazyCompile: ~next /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/route.js:116:16
+     53   10.5%        LazyCompile: ~<anonymous> /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/server.js:14:21
+     53  100.0%          LazyCompile: ~handle /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/layer.js:86:49
+     53  100.0%            LazyCompile: ~next /Users/ecc0z25smlvcg/CoderComision31820/EjerciciosClase3y4/Clase16/ejemploNodeProfiler/node_modules/express/lib/router/route.js:116:16
+
