@@ -68,6 +68,32 @@ app.post('/api/productos', async(req, res) => {
     })
 });
 
+//UPDATE
+app.put('/api/productos/:id', async(req, res) => {
+    const item = {
+        ...req.body,
+        productId: req.params.id
+    };
+
+    const params = {
+        TableName: TABLE_NAME,
+        Item: item
+    };
+
+    dynamodb.put(params).promise()
+    .then(() => {
+        const body = {
+            Operation: 'UPDATE',
+            Message: 'SUCCESS',
+            Item: item
+        };
+        res.json(body);
+    }).catch(error => {
+        console.log('Ocurrió un error');
+        res.status(500).end();
+    })
+})
+
 app.delete('/api/productos/:id', async(req, res) => {
     const params = {
         TableName: TABLE_NAME,
