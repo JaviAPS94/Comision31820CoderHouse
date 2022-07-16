@@ -1,0 +1,19 @@
+{
+  "name": "ejemplonpmcoderhouseap31820",
+  "version": "1.0.2",
+  "description": "",
+  "main": "node.js",
+  "scripts": {
+    "start": "node node.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
