@@ -1,0 +1,3 @@
+node src/testdao.js Mongo
+node src/testdao.js File
+node src/testdao.js Mem
