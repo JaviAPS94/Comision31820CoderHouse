@@ -35,21 +35,21 @@ console.log('--------------------------------')
 console.log('6) Obtener una persona por su id')
 mostrar(await personasRepo.getById(persona2.id))
 
-// console.log('-----------------------------')
-// console.log('7) Eliminar una persona por su id')
-// mostrar(await personasRepo.removeById(persona2.id))
+console.log('-----------------------------')
+console.log('7) Eliminar una persona por su id')
+mostrar(await personasRepo.removeById(persona2.id))
 
-// console.log('-----------------------------')
-// console.log('8) Obtener todas las personas')
-// mostrar(await personasRepo.getAll())
+console.log('-----------------------------')
+console.log('8) Obtener todas las personas')
+mostrar(await personasRepo.getAll())
 
-// console.log('--------------------------------')
-// console.log('9) Borrar todas las personas')
-// await personasRepo.removeAll()
+console.log('--------------------------------')
+console.log('9) Borrar todas las personas')
+await personasRepo.removeAll()
 
-// console.log('-----------------------------')
-// console.log('10) Obtener todas las personas')
-// mostrar(await personasRepo.getAll())
+console.log('-----------------------------')
+console.log('10) Obtener todas las personas')
+mostrar(await personasRepo.getAll())
 
 //---------------
 
