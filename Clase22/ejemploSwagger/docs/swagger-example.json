@@ -1,0 +1,141 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Coderhouse",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "http://development.com/api",
+      "description": "Development server"
+    },
+    {
+      "url": "http://production.com/api",
+      "description": "Production server"
+    },
+    {
+      "url": "http://localhost:3000/api",
+      "description": "Local server"
+    }
+  ],
+  "paths": {
+    "/products/{id}": {
+      "get": {
+        "summary": "Obtener productos",
+        "description": "Este servicio me permite obtener los productos de la bdd",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Product id"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name filter",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Productos obtenidos exitosamente",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Products"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Products"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Cuerpo para guardar un producto",
+            "schema": {
+              "$ref": "#/components/schemas/Product"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Product": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "test"
+          },
+          "price": {
+            "type": "number",
+            "example": 123414
+          },
+          "description": {
+            "type": "string",
+            "example": "product test"
+          }
+        },
+        "xml": {
+          "name": "Product"
+        }
+      },
+      "Products": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number",
+              "example": 2
+            },
+            "name": {
+              "type": "string",
+              "example": "test product 2"
+            },
+            "price": {
+              "type": "number",
+              "example": 35463456
+            },
+            "description": {
+              "type": "string",
+              "example": "product test 2"
+            }
+          }
+        },
+        "xml": {
+          "name": "Products"
+        }
+      }
+    }
+  }
+}
