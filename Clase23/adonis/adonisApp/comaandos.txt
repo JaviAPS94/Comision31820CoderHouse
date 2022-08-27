@@ -1,0 +1,7 @@
+npm i -g @adonis/cli
+adonis new name
+adonis server --dev
+
+adonis make:model Cupcake --migration
+adonis migration:run
+adonis migration:status

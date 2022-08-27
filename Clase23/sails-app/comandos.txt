@@ -1,0 +1,6 @@
+sails lift
+sails generate api book
+npm i sails-mysql
+npm i sails-mongo
+
+http://localhost:1337/book/create?name=Nico&price=400&category=Accion&author=FD&description=Mucha%20Accion!
